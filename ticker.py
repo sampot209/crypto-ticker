@@ -115,10 +115,11 @@ class Ticker(Frame):
         price_text = price_text.split('.')[0]
         price_text = price_text[1:-1] + 'K'
         graphics.DrawText(canvas, font_symbol, 0, 6, main_color, asset['symbol'])
-        graphics.DrawText(canvas, font_price, 0, 30, main_color, asset['price'])
-        graphics.DrawText(canvas, font_change, change_x, 17, 20, change_color, asset['change_24h']
+        graphics.DrawText(
+            canvas, font_change, change_x, 17, 20, change_color, asset['change_24h']
         )
-
+        graphics.DrawText(canvas, font_price, 0, 30, main_color, asset['price'])
+        
         return canvas
 
     def get_error_canvas(self):
