@@ -94,7 +94,7 @@ class Ticker(Frame):
         change_width = sum(
             [font_change.CharacterWidth(ord(c)) for c in asset['change_24h']]
         )
-        change_x = 62 - change_width
+        change_x = 30 - change_width
 
         # Get colors
         main_color = graphics.Color(255, 255, 0)
@@ -109,16 +109,16 @@ class Ticker(Frame):
             font_price.LoadFont('fonts/5x8.bdf')
 
         # Draw the elements on the canvas
-        #price_text = asset["price"]
-        #crypto_symbol = asset["symbol"]
-        #crypto_symbol = crypto_symbol.upper()
-        #price_text = price_text.split('.')[0]
-        #price_text = price_text[1:-1] + 'K'
-        graphics.DrawText(canvas, font_symbol, 0, 6, main_color, asset['symbol'])
-        graphics.DrawText(canvas, font_price, 0, 26, main_colour, asset['price'])
-        #graphics.DrawText(
-        #   canvas, font_change, change_x, 17, 20, change_color, asset['change_24h']
-        #)
+        price_text = asset["price"]
+        crypto_symbol = asset["symbol"]
+        crypto_symbol = crypto_symbol.upper()
+        price_text = price_text.split('.')[0]
+        price_text = price_text[1:-1] + 'K'
+        graphics.DrawText(canvas, font_symbol, 0, 6, main_color, crypto_symbol)
+        graphics.DrawText(canvas, font_price, 0, 26, main_colour, price_text)
+        graphics.DrawText(
+           canvas, font_change, change_x, 10, change_color, asset['change_24h']
+        )
         
         return canvas
 
