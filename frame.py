@@ -8,7 +8,7 @@ class Frame:
     def __init__(self, *args, **kwargs):
         self.args = {}
         self.args['led_rows'] = kwargs.get('led_rows', 32)
-        self.args['led_cols'] = kwargs.get('led_cols', 32)
+        self.args['led_cols'] = kwargs.get('led_cols', 64)
         self.args['led_chain'] = kwargs.get('led_chain', 1)
         self.args['led_parallel'] = kwargs.get('led_parallel', 1)
         self.args['led_pwm_bits'] = kwargs.get('led_pwm_bits', 11)
