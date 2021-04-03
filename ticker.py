@@ -82,7 +82,7 @@ class Ticker(Frame):
 
         # Create fonts for displaying prices
         font_symbol = graphics.Font()
-        font_symbol.LoadFont('fonts/5x7.bdf')
+        font_symbol.LoadFont('fonts/5x8.bdf')
 
         font_price = graphics.Font()
         font_price.LoadFont('fonts/4x6.bdf')
@@ -109,7 +109,7 @@ class Ticker(Frame):
             font_price.LoadFont('fonts/5x8.bdf')
 
         # Draw the elements on the canvas
-        graphics.DrawText(canvas, font_symbol, 0, 6, main_color, asset['symbol'])
+        graphics.DrawText(canvas, font_symbol, 0, 13, main_color, asset['symbol'])
         graphics.DrawText(canvas, font_price, 0, 30, main_color, asset['price'])
         graphics.DrawText(
            canvas, font_change, change_x, 6, change_color, asset['change_24h']
