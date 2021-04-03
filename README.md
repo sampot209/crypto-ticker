@@ -1,5 +1,8 @@
 # Crypto Ticker
 
+THIS HAS BEEN UPDATED TO ALLOW FOR USE WITH A 32X32 MATRIX.
+this project is not complete and is still being tinkered with. It has additional smaller font sizes added. 
+
 A library for displaying crypto asset prices on an LED matrix panel using a Raspberry Pi.
 
 Requires:
