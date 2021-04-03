@@ -98,7 +98,7 @@ class Ticker(Frame):
 
         # Get colors
         main_color = graphics.Color(255, 255, 0)
-        two_color = graphics.color(196, 196, 0)
+        two_color = graphics.color(0, 255, 0)
         change_color = (
             graphics.Color(194, 24, 7)
             if asset['change_24h'].startswith('-')
