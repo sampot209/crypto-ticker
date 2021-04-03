@@ -7,7 +7,7 @@ A library for displaying crypto asset prices on an LED matrix panel using a Rasp
 
 Requires:
 
-  * Adafruit 64x32 LED Matrix Panel
+  * Adafruit 32x32 LED Matrix Panel
   * Raspberry Pi Zero WH
   * CoinMarketCap API Account
 
