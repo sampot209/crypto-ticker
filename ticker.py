@@ -94,7 +94,7 @@ class Ticker(Frame):
         change_width = sum(
             [font_change.CharacterWidth(ord(c)) for c in asset['change_24h']]
         )
-        change_x = 32 - change_width
+        change_x = 33 - change_width
 
         # Get colors
         main_color = graphics.Color(255, 255, 0)
