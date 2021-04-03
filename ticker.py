@@ -94,14 +94,15 @@ class Ticker(Frame):
         change_width = sum(
             [font_change.CharacterWidth(ord(c)) for c in asset['change_24h']]
         )
-        change_x = 30 - change_width
+        change_x = 32 - change_width
 
         # Get colors
         main_color = graphics.Color(255, 255, 0)
+        two_color = graphics.color(196, 196, 0)
         change_color = (
             graphics.Color(194, 24, 7)
             if asset['change_24h'].startswith('-')
-            else graphics.Color(46, 139, 87)
+            else graphics.Color(30, 240, 0)
         )
 
         # Load a smaller font to andle 6-figure asset prices
@@ -109,10 +110,10 @@ class Ticker(Frame):
             font_price.LoadFont('fonts/5x8.bdf')
 
         # Draw the elements on the canvas
-        graphics.DrawText(canvas, font_symbol, 2, 6, main_color, asset['symbol'])
-        graphics.DrawText(canvas, font_price, 2, 30, main_color, asset['price'])
+        graphics.DrawText(canvas, font_symbol, 0, 6, main_color, asset['symbol'])
+        graphics.DrawText(canvas, font_price, 0, 30, two_color, asset['price'])
         graphics.DrawText(
-           canvas, font_change, change_x, 18, change_color, asset['change_24h']
+           canvas, font_change, change_x, 6, change_color, asset['change_24h']
         )
         
         return canvas
