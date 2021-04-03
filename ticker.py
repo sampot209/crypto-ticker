@@ -98,11 +98,10 @@ class Ticker(Frame):
 
         # Get colors
         main_color = graphics.Color(255, 255, 0)
-        two_color = graphics.color(0, 255, 0)
         change_color = (
-            graphics.Color(194, 24, 7)
+            graphics.Color(255, 0, 0)
             if asset['change_24h'].startswith('-')
-            else graphics.Color(30, 240, 0)
+            else graphics.Color(0, 255, 0)
         )
 
         # Load a smaller font to andle 6-figure asset prices
@@ -111,7 +110,7 @@ class Ticker(Frame):
 
         # Draw the elements on the canvas
         graphics.DrawText(canvas, font_symbol, 0, 6, main_color, asset['symbol'])
-        graphics.DrawText(canvas, font_price, 0, 30, two_color, asset['price'])
+        graphics.DrawText(canvas, font_price, 0, 30, main_color, asset['price'])
         graphics.DrawText(
            canvas, font_change, change_x, 6, change_color, asset['change_24h']
         )
